@@ -1,0 +1,57 @@
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  background-image: url(/src/images/background-mobile.png), linear-gradient(180.11deg, #E5E2E3 10.73%, #FDFEFE 38.02%, #E5E2E3 71.11%, #FDFEFE 99.91%);
+  @media screen and (min-width: 768px) {
+    background-image: url(/src/images/background-tablet.png), linear-gradient(180.11deg, #E5E2E3 10.73%, #FDFEFE 38.02%, #E5E2E3 71.11%, #FDFEFE 99.91%);
+  }
+  @media screen and (min-width: 1280px) {
+    background-image: url(/src/images/background-mobile.png), linear-gradient(180.11deg, #E5E2E3 10.73%, #FDFEFE 38.02%, #E5E2E3 71.11%, #FDFEFE 99.91%); 
+  }
+  
+  background-repeat: no-repeat; 
+  background-size: cover;
+
+  cursor: url('/src/images/donut-mause.png'), pointer;
+  scroll-behavior: smooth;
+}
+
+section {
+  min-width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}

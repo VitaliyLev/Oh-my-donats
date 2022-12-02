@@ -1,0 +1,261 @@
+.reviews {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.reviews__container {
+  @media screen and (min-width: 1280px) {
+    width: 1033px;
+  }
+}
+
+.reviews__title {
+  text-align: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-bottom: -15px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 35px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.swiper__wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  cursor: url('/src/images/donut-mause.png'), pointer;
+}
+
+.swiper__slide {
+  flex-shrink: 0;
+
+  @media screen and (min-width: 768px) {
+    & .swiper__comment {
+      display: none;
+    }
+  }
+}
+
+.swiper-slide-active {
+  @media screen and (min-width: 768px) {
+    flex-basis: 336px;
+    margin-top: 76px;
+
+    & .swiper__comment {
+      position: absolute;
+
+      display: block;
+      width: 100%;
+    }
+
+    // Для правильного відображення коментаря на кожному з слайдів
+    &[data-swiper-slide-index='0'] .swiper__comment {
+      left: calc(166% + 64px);
+    }
+
+    &[data-swiper-slide-index='1'] .swiper__comment {
+      left: calc(100% + 32px);
+    }
+
+    &[data-swiper-slide-index='2'] .swiper__comment {
+      left: calc(134% + 32px);
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-basis: 394px;
+    margin-top: 143px;
+
+    & .swiper__comment {
+      display: block;
+    }
+  }
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - (32px * 2) - 336px) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc((100% - (32px * 2) - 394px) / 2);
+  }
+}
+
+.swiper__image {
+  margin-bottom: 8px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.swiper__rate {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+
+  cursor: url('/src/images/donut-mause.png'), pointer;
+  fill: #edd501;
+  scroll-behavior: smooth;
+}
+
+.swiper__name {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  line-height: 1.21;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.swiper__comment {
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+
+// Pagination
+.swiper__pagination {
+  position: static;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+
+  font-size: 14;
+  line-height: 1.21;
+  color: black;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 1px;
+    background-color: #f3848c;
+  }
+
+  &::before {
+    margin-right: 12px;
+  }
+
+  &::after {
+    margin-left: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 112px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 98px;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 50px;
+  height: 50px;
+}
+
+.top-image {
+  width: 70px;
+  height: 70px;
+
+  @media screen and (min-width: 768px) {
+    width: 130px;
+    height: 130px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.bottom-top {
+  position: fixed;
+  z-index: 999;
+  bottom: 70px;
+  right: 15px;
+  cursor: url('/src/images/donut-mause.png'), pointer;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  scroll-behavior: smooth;
+}
+
+.bottom-top_hide {
+  display: none;
+  opacity: 0;
+}
+
+.bottom-top_hiding {
+  opacity: 0;
+}
+
+.donut-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: -40px;
+  background: url('/src/images/donut-clipart.gif');
+  background-color: #f3848c;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-size: 25px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: transparent;
+  font-weight: 800;
+
+  &:hover,
+  &:focus {
+    background-color: white;
+    -webkit-text-fill-color: yellow;
+    -webkit-text-stroke: 1px rosybrown;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1280px) {
+    width: 70px;
+    height: 70px;
+    margin-left: -50px;
+  }
+}

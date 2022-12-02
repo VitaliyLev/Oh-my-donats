@@ -1,0 +1,232 @@
+.registration__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 34px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 40px 20px;
+  }
+}
+
+.registration__box label {
+  display: block;
+  &:not(:last-child) {
+    margin-bottom: 22px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.registration__title {
+  margin-bottom: 27px;
+  text-align: center;
+  font-family: $montserrat;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  color: $paragraph-text-color;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    font-weight: 500;
+    color: $paragraph-text-color;
+  }
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 10px 32px 10px;
+  width: 100%;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(61, 44, 44, 0.6) 100%,
+      rgba(61, 44, 44, 0.6) 100%
+    ),
+    url(../images/Registration/registration-mob-min.png);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-radius: 10px;
+  box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        rgba(61, 44, 44, 0.6) 100%,
+        rgba(61, 44, 44, 0.6) 100%
+      ),
+      url(../images/Registration/registration-mob@2x-min.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 246px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 40px 20px 23px;
+
+    background-image: url(../images/Registration/colorful-and-tasty-donuts-tablet-min.png),
+      url(../images/Registration/Rectangle13-min.png),
+      linear-gradient(
+        to right,
+        rgba(61, 44, 44, 0.3) 100%,
+        rgba(61, 44, 44, 0.3) 100%
+      ),
+      url(../images/Registration/registration-tablet-min.png);
+    background-position: 20px 90%, left center, right center, right center;
+    background-repeat: no-repeat;
+    background-size: 100px 66px, 563px 246px, 453px 243px, 453px 243px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1030px;
+    padding: 40px 20px 40px 20px;
+    background-image: url(../images/Registration/colorful-and-tasty-donuts-desktop-min.png),
+      url(../images/Registration/Rectangle13-min.png),
+      linear-gradient(
+        to right,
+        rgba(61, 44, 44, 0.3) 100%,
+        rgba(61, 44, 44, 0.3) 100%
+      ),
+      url(../images/Registration/registration-desktop-min.png);
+    background-position: 15px 90%, left center, right center, right center;
+    background-repeat: no-repeat;
+    background-size: 200px 133px, 972px 246px, 972px 246px, 453px 246px;
+  }
+}
+
+.registration__time-date {
+  border-bottom: 1px solid $white-color;
+  width: 100%;
+  font-weight: 500;
+  text-align: center;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  color: $white-color;
+
+  @media screen and (min-width: 768px) {
+    color: $paragraph-text-color;
+    border-bottom: none;
+    width: 90px;
+    text-align: end;
+    margin-bottom: 0px;
+    padding: 0;
+
+    border-right: 1px solid $paragraph-text-color;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 32px;
+    width: 140px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    border-right: 1px solid $paragraph-text-color;
+    height: 100%;
+
+    padding-right: 28px;
+    width: 160px;
+
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+  }
+}
+.registration__box {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 235px;
+    text-align: start;
+    margin-left: 24px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 28px;
+    margin-right: 45px;
+  }
+}
+
+.registration__subtitle {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 20px;
+  color: $white-color;
+
+  @media screen and (min-width: 768px) {
+    color: $paragraph-text-color;
+    text-align: left;
+     }
+
+  @media screen and (min-width: 1280px) {
+    font-weight: 500;
+  }
+}
+.registration__input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid $white-color;
+  color: $white-color;
+  width: 100%;
+  outline-color: none;
+  
+    &:invalid {
+      outline-color: red;
+    }
+  
+    &:valid {
+      outline-color: $accent-color;
+    }
+  &::placeholder {
+    color: $white-color;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    @media screen and (min-width: 768px) {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    @media screen and (min-width: 1280px) {
+      color: $paragraph-text-color;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    color: $paragraph-text-color;
+    border-bottom: 1px solid $paragraph-text-color;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .registration__form button {
+    margin-left: auto;
+  }
+}
+
+// @media screen and (min-width: 1280px) {
+//   .registration__form button {
+//     margin-right: auto;
+//   }
+// }
